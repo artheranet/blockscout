@@ -188,5 +188,5 @@ export ACCOUNT_REDIS_URL=redis://localhost:6379
 # AMPLITUDE_API_KEY=
 # AMPLITUDE_URL=
 export EIP_1559_ELASTICITY_MULTIPLIER=2
-export MIX_ENV=dev
-export API_V2_ENABLED=false
+export MIX_ENV=prod
+export API_V2_ENABLED=true
