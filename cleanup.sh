@@ -1,10 +1,10 @@
 #!/bin/bash
 
-rm -rf _build/
-mix do ecto.drop
-
 mix do deps.get, local.rebar --force, deps.compile
 mix phx.digest.clean
+
+rm -rf _build/
+mix do ecto.drop
 
 cd apps/explorer && npm install; cd -
 
