@@ -137,7 +137,7 @@ defmodule Indexer.Fetcher.InternalTransaction do
         handle_not_found_transaction(reason)
 
         # re-queue the de-duped entries
-        {:retry, filtered_unique_numbers}
+        # {:retry, filtered_unique_numbers}
 
       {:error, reason, stacktrace} ->
         Logger.error(
@@ -150,7 +150,7 @@ defmodule Indexer.Fetcher.InternalTransaction do
         handle_not_found_transaction(reason)
 
         # re-queue the de-duped entries
-        {:retry, filtered_unique_numbers}
+        # {:retry, filtered_unique_numbers}
 
       :ignore ->
         :ok
