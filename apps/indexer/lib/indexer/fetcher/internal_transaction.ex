@@ -134,7 +134,7 @@ defmodule Indexer.Fetcher.InternalTransaction do
           error_count: filtered_unique_numbers_count
         )
 
-        handle_not_found_transaction(reason)
+        # handle_not_found_transaction(reason)
 
         # re-queue the de-duped entries
         # {:retry, filtered_unique_numbers}
@@ -147,7 +147,7 @@ defmodule Indexer.Fetcher.InternalTransaction do
           error_count: filtered_unique_numbers_count
         )
 
-        handle_not_found_transaction(reason)
+        # handle_not_found_transaction(reason)
 
         # re-queue the de-duped entries
         # {:retry, filtered_unique_numbers}
