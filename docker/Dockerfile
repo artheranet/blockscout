@@ -41,11 +41,11 @@ RUN apk add --update nodejs npm
 RUN mix compile && npm install npm@latest
 
 # Add blockscout npm deps
-RUN cd apps/block_scout_web/assets/ && \
-    npm install && \
-    npm run deploy && \
-    cd /app/apps/explorer/ && \
-    npm install
+#RUN cd apps/block_scout_web/assets/ && \
+#    npm install && \
+#    npm run deploy && \
+#    cd /app/apps/explorer/ && \
+#    npm install
 
 RUN export "CFLAGS=-I/usr/local/include -L/usr/local/lib" && cd deps/ex_secp256k1 && mix deps.get && mix compile
 RUN mix phx.digest
@@ -67,6 +67,6 @@ RUN apk --no-cache --update add jq curl
 WORKDIR /app
 
 COPY --from=builder /opt/release/blockscout .
-COPY --from=builder /app/apps/explorer/node_modules ./node_modules
+#COPY --from=builder /app/apps/explorer/node_modules ./node_modules
 COPY --from=builder /app/config/config_helper.exs ./config/config_helper.exs
 COPY --from=builder /app/config/config_helper.exs /app/releases/${RELEASE_VERSION}/config_helper.exs
