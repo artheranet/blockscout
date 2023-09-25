@@ -1,6 +1,6 @@
 #!/bin/bash
 
-export RELEASE_VERSION=5.2.1
+export RELEASE_VERSION=5.2.3-beta
 export BS_CONTAINER_IMAGE=arthera/blockscout
 
 docker build -f ./Dockerfile -t "$BS_CONTAINER_IMAGE:$RELEASE_VERSION" \
